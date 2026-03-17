@@ -1,23 +1,101 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:#f9fafb;
-    color:#111827;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:40px 20px;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-h1{
-    font-size:32px;
-    margin-bottom:30px;
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:linear-gradient(135deg,#0f172a,#020617);
+    color:#f1f5f9;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:60px 20px;
 }
+
+/* Main container */
+
+.app-container{
+    width:100%;
+    max-width:900px;
+    height: 500px;
+    text-align:center;
+    background:#020617;
+    padding:40px;
+    border-radius:16px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* Heading */
+
+h1{
+    font-size:36px;
+    margin-bottom:40px;
+    font-weight:700;
+    letter-spacing:0.5px;
+}
+
+/* Controls */
+
+.controls{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.control-group{
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+}
+
+.control-group label{
+    font-size:13px;
+    margin-bottom:6px;
+    color:#94a3b8;
+}
+
+/* Select */
+
+select{
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid #1e293b;
+    background:#020617;
+    color:#e2e8f0;
+    font-size:14px;
+    outline:none;
+    transition:0.2s;
+}
+
+select:focus{
+    border-color:#3b82f6;
+}
+
+/* Button */
+
+#generate-btn{
+    padding:12px 22px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+#generate-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(37,99,235,0.5);
+}
+
+/* Palette container */
 
 .pallet-container{
     display:flex;
@@ -26,19 +104,23 @@ h1{
     justify-content:center;
 }
 
+/* Palette cards */
+
 .pallet{
-    width:120px;
-    height:120px;
+    width:140px;
+    height:140px;
     border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
     display:flex;
-    flex-direction:column;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     color:#fff;
     font-weight:600;
     font-size:14px;
+    transition:0.25s;
 }
 
-
-    
+.pallet:hover{
+    transform:translateY(-6px) scale(1.04);
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}

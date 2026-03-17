@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Palette Generator</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-     <div>
-        <h1>Color Pallet Generator</h1>
-        <input type="text" id="color-input" placeholder="Enter a color (e.g., #ff0000 or red)">
-        <button id="generate-btn">Generate Pallet</button>
 
-            <div id="color-pallet"></div>
+<div class="app-container">
 
-            
-     </div>
+    <h1>Color Palette Generator</h1>
 
+    <div class="controls">
 
-    <script src="script.js"></script>
+        <div class="control-group">
+            <label>Color Format</label>
+            <select id="color-format">
+                <option value="hex">HEX</option>
+                <option value="rgb">RGB</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>Palette Mode</label>
+            <select id="palette-mode">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+
+        <button id="generate-btn">Generate Palette</button>
+
+    </div>
+
+    <div id="color-pallet" class="pallet-container"></div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
